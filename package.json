@@ -1,0 +1,16 @@
+{
+  "name": "agent-ready-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "One capability contract for the agentic web: define once, govern once, expose safely through WebMCP and future adapters.",
+  "type": "module",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "tsc -p packages/runtime/tsconfig.json",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "demo": "npm run build && node scripts/serve.mjs",
+    "check": "npm run build && npm test"
+  },
+  "devDependencies": {"typescript": "^5.8.3"},
+  "engines": {"node": ">=20"}
+}
